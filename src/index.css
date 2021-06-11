@@ -1,13 +1,202 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main {
+  width: 768px;
+  margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.head {
+  font-family: 'Roboto Condensed';
+  text-transform: uppercase;
+  font-size: 36px;
+  text-align: center;
+}
+
+.row {
+  width: 728px;
+  margin: 0 0 300px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo {
+  width: 229px;
+  height: 142px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.photo img {
+  width: 229px;
+}
+
+.line {
+  width: 728px;
+  margin: auto;
+  border-top: 1px solid #CCCCCC;
+}
+
+.footer p {
+  font-family: 'Roboto Condensed';
+  font-size: 14px;
+  color: #CCCCCC;
+  text-align: center;
+}
+
+.modal {
+  width: 619px;
+  height: 380px;
+  margin-top: 180px;
+  position: relative;
+  padding: 30px;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.deactivator {
+  position: fixed;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7 );
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.deactivator.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-Img {
+  width: 331px;
+  margin-bottom: 30px;
+  margin-right: 14px;
+}
+
+.modal-top {
+  display: flex;
+}
+
+.modal-bottom {
+  text-align: left;
+}
+
+input {
+  width: 319px;
+  height: 30px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 333px;
+  height: 30px;
+  background: #4997D0;
+  color: #FFFFFF;
+  border-radius: 3px;
+}
+
+.modal-close {
+  font-size: 40px;
+  color: #000000;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 21px;
+}
+
+.modal-Img img {
+  width: 331px;
+  height: 205px;
+}
+.data {
+  color: #999999;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.comment, .data, button, input {
+  font-family: 'Roboto';
+  font-size: 13px;
+}
+
+.comment {
+  margin-bottom: 7px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 320px) {
+  .main, .row, .footer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .deactivator, .modal, .modal-bottom {
+    width: 100%;
+  }
+
+  .modal {
+    height: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  input {
+    width: 86%;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+
+  button {
+    width: 86%;
+  }
+
+  .modal-Img, .modal-Img img {
+    width: 100%;
+  }
+
+  .line  {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .photo img {
+    width: 100%;
+  }
+
+  .photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .head {
+    text-align: center;
+  }
+
+  .modal-top {
+    display: block;
+  }
+
+  .modal-bottom {
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+
+  .data, .comment {
+    padding-left: 20px;
+  }
+
+  .comment {
+    margin-bottom: 20px;
+  }
+
+
 }
